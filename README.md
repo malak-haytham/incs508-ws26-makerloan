@@ -10,11 +10,11 @@
 
 | # | Student ID | Full Name | GitHub Username | Role |
 |---|------------|-----------|-----------------|------|
-| 1 | TODO | TODO | TODO | Project lead (F1, R01-R03) |
-| 2 | TODO | TODO | TODO | Traceability owner (F2, R04-R06) |
-| 3 | TODO | TODO | TODO | AI-USE.md consolidation (F3, R07-R09) |
-| 4 | TODO | TODO | TODO | Prototype integration (F4, R10-R12) |
-| 5 | TODO | TODO | TODO | QA / checklist (F5, R13-R15) |
+| 1 | 16001898 | Malak Haytham | malak-haytham | Project lead (F1, R01-R03) |
+| 2 | 16002993 | Renad Hesham | TODO | Traceability owner (F2, R04-R06) |
+| 3 | 16001317 | Arwa Ismail | TODO | AI-USE.md consolidation (F3, R07-R09) |
+| 4 | 16003231 | Mohamed Amro | TODO | Prototype integration (F4, R10-R12) |
+| 5 | 17001987 | Marwan Abdelaal | TODO | QA / checklist (F5, R13-R15) |
 
 ## Repository structure
 

@@ -1,21 +1,31 @@
 :root {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  color: #192b25;
-  background: #f5f7f5;
+  color: #0b1b32;
+  background: #faf7f9;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-optical-sizing: auto;
   font-weight: 400;
-  --color-ink: #192b25;
-  --color-muted: #73817b;
-  --color-green: #17684e;
-  --color-green-dark: #104e3a;
-  --color-line: #e2e8e4;
+  --color-navy: #0d1e4c;
+  --color-mauve: #c48cb3;
+  --color-blush: #e5c9d7;
+  --color-blue: #83a6ce;
+  --color-slate: #26415e;
+  --color-deep: #0b1b32;
+  --color-ink: var(--color-deep);
+  --color-muted: #5c6d83;
+  --color-brand: var(--color-navy);
+  --color-brand-dark: var(--color-deep);
+  --color-accent: var(--color-mauve);
+  --color-accent-soft: #f5eaf0;
+  --color-highlight: var(--color-blue);
+  --color-highlight-soft: #edf3f9;
+  --color-line: #e4e7ec;
   --color-surface: #ffffff;
-  --color-canvas: #f5f7f5;
-  --shadow-soft: 0 14px 45px rgb(31 52 41 / 6%);
+  --color-canvas: #faf7f9;
+  --shadow-soft: 0 14px 45px rgb(11 27 50 / 7%);
 }
 
 * { box-sizing: border-box; }
@@ -24,8 +34,8 @@ button, input, select, textarea { font: inherit; }
 button { cursor: pointer; }
 button:disabled { cursor: not-allowed; }
 a { color: inherit; }
-::selection { color: #fff; background: #17684e; }
-:focus-visible { outline: 3px solid rgb(23 104 78 / 35%); outline-offset: 3px; }
+::selection { color: #fff; background: var(--color-navy); }
+:focus-visible { outline: 3px solid rgb(131 166 206 / 58%); outline-offset: 3px; }
 
 .app-loading {
   align-items: center;
@@ -40,20 +50,20 @@ a { color: inherit; }
 
 .loading-spinner {
   animation: app-spin 0.8s linear infinite;
-  border: 2px solid #dce8e1;
+  border: 2px solid #dce3ec;
   border-radius: 50%;
-  border-top-color: var(--color-green);
+  border-top-color: var(--color-navy);
   height: 20px;
   width: 20px;
 }
 
 .access-page { align-items: center; background: var(--color-canvas); display: flex; justify-content: center; min-height: 100vh; padding: 24px; }
 .access-card { background: #fff; border: 1px solid var(--color-line); border-radius: 15px; box-shadow: var(--shadow-soft); max-width: 460px; padding: 32px; text-align: center; }
-.access-icon { align-items: center; background: #fff2e9; border-radius: 50%; color: #9b5c24; display: inline-flex; font-size: 1.05rem; font-weight: 800; height: 42px; justify-content: center; margin-bottom: 17px; width: 42px; }
-.access-eyebrow { color: #7e8f85; display: block; font-size: 0.66rem; font-weight: 800; letter-spacing: 0.13em; }
-.access-card h1 { color: #20382b; font-size: 1.55rem; letter-spacing: -0.04em; margin: 10px 0; }
-.access-card p { color: #7a8981; font-size: 0.88rem; line-height: 1.55; margin: 0 0 20px; }
-.access-card a { background: #17684e; border-radius: 7px; color: #fff; display: inline-flex; font-size: 0.81rem; font-weight: 700; padding: 10px 13px; text-decoration: none; }
+.access-icon { align-items: center; background: var(--color-accent-soft); border-radius: 50%; color: var(--color-navy); display: inline-flex; font-size: 1.05rem; font-weight: 800; height: 42px; justify-content: center; margin-bottom: 17px; width: 42px; }
+.access-eyebrow { color: var(--color-muted); display: block; font-size: 0.66rem; font-weight: 800; letter-spacing: 0.13em; }
+.access-card h1 { color: var(--color-navy); font-size: 1.55rem; letter-spacing: -0.04em; margin: 10px 0; }
+.access-card p { color: var(--color-muted); font-size: 0.88rem; line-height: 1.55; margin: 0 0 20px; }
+.access-card a { background: var(--color-navy); border-radius: 7px; color: #fff; display: inline-flex; font-size: 0.81rem; font-weight: 700; padding: 10px 13px; text-decoration: none; }
 
 @keyframes app-spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; } }

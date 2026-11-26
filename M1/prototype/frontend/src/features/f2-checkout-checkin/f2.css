@@ -1,0 +1,34 @@
+.f2 {
+  --navy: #0d1e4c;
+  --rose: #c48cb3;
+  --blush: #e5c9d7;
+  --sky: #83a6ce;
+  --slate: #26415e;
+  --ink: #0b1b32;
+  color: var(--ink);
+}
+.f2 h2 { color: var(--navy); margin-top: 8px; }
+.f2-card { border: 1px solid var(--blush); border-radius: 12px; margin-bottom: 20px; overflow: hidden; background: #fff; }
+.f2-card > h3 { margin: 0; padding: 10px 16px; background: var(--navy); color: var(--blush); font-size: 16px; font-weight: 600; }
+.f2-body { padding: 16px; }
+.f2-form { display: grid; gap: 12px; max-width: 520px; }
+.f2-form label { display: grid; gap: 4px; font-weight: 600; color: var(--slate); font-size: 14px; }
+.f2 select, .f2 input, .f2 textarea { padding: 8px 10px; border: 1px solid var(--sky); border-radius: 8px; font: inherit; color: var(--ink); background: #fff; }
+.f2 select:focus, .f2 input:focus, .f2 textarea:focus { outline: 2px solid var(--rose); outline-offset: 1px; }
+.f2-btn { padding: 9px 16px; border: 0; border-radius: 8px; cursor: pointer; font: inherit; font-weight: 600; background: var(--navy); color: var(--blush); }
+.f2-btn:hover:not(:disabled) { background: var(--slate); }
+.f2-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+.f2-btn.secondary { background: var(--blush); color: var(--navy); }
+.f2-btn.secondary:hover:not(:disabled) { background: var(--rose); color: #fff; }
+.f2-actions { display: flex; gap: 8px; }
+.f2-msg { padding: 10px 14px; border-radius: 8px; margin-bottom: 16px; border-left: 5px solid; }
+.f2-msg.success { background: #e3ecf6; border-color: var(--sky); color: var(--slate); }
+.f2-msg.error { background: var(--blush); border-color: var(--rose); color: var(--ink); }
+.f2-table { width: 100%; border-collapse: collapse; }
+.f2-table th { text-align: left; padding: 8px 12px; background: var(--slate); color: var(--blush); font-weight: 600; }
+.f2-table td { padding: 8px 12px; border-bottom: 1px solid var(--blush); }
+.f2-table tr:nth-child(even) td { background: #faf3f7; }
+.f2-badge { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+.f2-badge.ACTIVE { background: var(--sky); color: var(--ink); }
+.f2-badge.OVERDUE { background: var(--rose); color: #fff; }
+.f2-muted { color: var(--slate); }

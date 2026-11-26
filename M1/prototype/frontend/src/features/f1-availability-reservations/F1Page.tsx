@@ -1,14 +1,5 @@
-/**
- * F1 Availability & Reservations — requirements R01–R03
- * Owner: Member 1
- * Keep all of this feature's components, hooks and API calls inside this folder.
- * Tag UI elements with data-req="R0X" (or a visible label) so the traceability table can point at them.
- */
+import FeaturePlaceholder from '../../components/FeaturePlaceholder';
+
 export default function F1Page() {
-  return (
-    <section>
-      <h2>F1 Availability & Reservations</h2>
-      <p>TODO(Member 1): build this feature's UI.</p>
-    </section>
-  );
+  return <FeaturePlaceholder number="01" title="Availability & reservations" description="Find equipment in the makerspace and reserve an available item for your next project." requirements={['R01', 'R02', 'R03']} destination="/safety" destinationLabel="Safety briefings" />;
 }

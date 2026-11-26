@@ -16,7 +16,7 @@ export class F5SafetyController {
 
   @Get('borrowers')
   @Roles(Role.DESK_ASSISTANT, Role.MANAGER, Role.SAFETY_OFFICER)
-  @ApiOperation({ summary: 'List borrowers for safety review', description: 'R14: Authorized safety staff select a borrower to review or record a briefing.' })
+  @ApiOperation({ summary: 'List borrowers for safety review', description: 'R15: Only authorized safety staff may view active borrowers and their certification status.' })
   @ApiResponse({ status: 200, description: 'Borrowers with their current safety certification status' })
   @ApiResponse({ status: 401, description: 'Not logged in', type: ErrorResponseDto })
   @ApiResponse({ status: 403, description: 'Wrong role', type: ErrorResponseDto })
@@ -26,8 +26,8 @@ export class F5SafetyController {
 
   @Get('briefings')
   @Roles(Role.DESK_ASSISTANT, Role.MANAGER, Role.SAFETY_OFFICER)
-  @ApiOperation({ summary: 'List recent safety briefings', description: 'R14: Authorized safety staff review recorded briefings and certification status.' })
-  @ApiResponse({ status: 200, description: 'Most recent 100 briefing records' })
+  @ApiOperation({ summary: 'List safety briefing history', description: 'R13, R15: Authorized safety staff review recorded briefing details and who recorded each briefing.' })
+  @ApiResponse({ status: 200, description: 'Briefing records sorted by completion time, newest first' })
   @ApiResponse({ status: 401, description: 'Not logged in', type: ErrorResponseDto })
   @ApiResponse({ status: 403, description: 'Wrong role', type: ErrorResponseDto })
   listBriefings() {
@@ -36,7 +36,7 @@ export class F5SafetyController {
 
   @Get('status/:borrowerId')
   @Roles(Role.DESK_ASSISTANT, Role.MANAGER, Role.SAFETY_OFFICER)
-  @ApiOperation({ summary: 'Check a borrower’s safety status', description: 'R14: Show whether a borrower has a recorded safety briefing before a safety-controlled loan.' })
+  @ApiOperation({ summary: 'Check a borrower’s safety status', description: 'R14, R15: Show the certification status used by the F2 check-out gate. The F2 check-out operation rejects safety-controlled loans for uncertified borrowers.' })
   @ApiResponse({ status: 200, description: 'Borrower certification status and latest briefing time' })
   @ApiResponse({ status: 400, description: 'Invalid borrower id', type: ErrorResponseDto })
   @ApiResponse({ status: 401, description: 'Not logged in', type: ErrorResponseDto })
@@ -48,7 +48,7 @@ export class F5SafetyController {
 
   @Post('briefings')
   @Roles(Role.DESK_ASSISTANT, Role.MANAGER, Role.SAFETY_OFFICER)
-  @ApiOperation({ summary: 'Record a completed safety briefing', description: 'R13: Authorized safety staff record a briefing; the borrower becomes safety-certified for F2 check-out verification.' })
+  @ApiOperation({ summary: 'Record a completed safety briefing', description: 'R13, R15: Authorized safety staff record the borrower and completion time; the borrower becomes safety-certified for F2 check-out verification.' })
   @ApiResponse({ status: 201, description: 'Briefing recorded and borrower certified' })
   @ApiResponse({ status: 400, description: 'Invalid borrower id', type: ErrorResponseDto })
   @ApiResponse({ status: 401, description: 'Not logged in', type: ErrorResponseDto })

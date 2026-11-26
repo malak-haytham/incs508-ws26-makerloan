@@ -1,14 +1,5 @@
-/**
- * F2 Check-out & Check-in — requirements R04–R06
- * Owner: Member 2
- * Keep all of this feature's components, hooks and API calls inside this folder.
- * Tag UI elements with data-req="R0X" (or a visible label) so the traceability table can point at them.
- */
+import FeaturePlaceholder from '../../components/FeaturePlaceholder';
+
 export default function F2Page() {
-  return (
-    <section>
-      <h2>F2 Check-out & Check-in</h2>
-      <p>TODO(Member 2): build this feature's UI.</p>
-    </section>
-  );
+  return <FeaturePlaceholder number="02" title="Check-out & check-in" description="Help desk staff issue equipment to borrowers, record returns, and keep loan records accurate." requirements={['R04', 'R05', 'R06']} destination="/availability" destinationLabel="Availability" />;
 }

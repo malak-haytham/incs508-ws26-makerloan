@@ -1,0 +1,59 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #192b25;
+  background: #f5f7f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  --color-ink: #192b25;
+  --color-muted: #73817b;
+  --color-green: #17684e;
+  --color-green-dark: #104e3a;
+  --color-line: #e2e8e4;
+  --color-surface: #ffffff;
+  --color-canvas: #f5f7f5;
+  --shadow-soft: 0 14px 45px rgb(31 52 41 / 6%);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+a { color: inherit; }
+::selection { color: #fff; background: #17684e; }
+:focus-visible { outline: 3px solid rgb(23 104 78 / 35%); outline-offset: 3px; }
+
+.app-loading {
+  align-items: center;
+  background: var(--color-canvas);
+  color: var(--color-muted);
+  display: flex;
+  font-size: 0.95rem;
+  gap: 12px;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.loading-spinner {
+  animation: app-spin 0.8s linear infinite;
+  border: 2px solid #dce8e1;
+  border-radius: 50%;
+  border-top-color: var(--color-green);
+  height: 20px;
+  width: 20px;
+}
+
+.access-page { align-items: center; background: var(--color-canvas); display: flex; justify-content: center; min-height: 100vh; padding: 24px; }
+.access-card { background: #fff; border: 1px solid var(--color-line); border-radius: 15px; box-shadow: var(--shadow-soft); max-width: 460px; padding: 32px; text-align: center; }
+.access-icon { align-items: center; background: #fff2e9; border-radius: 50%; color: #9b5c24; display: inline-flex; font-size: 1.05rem; font-weight: 800; height: 42px; justify-content: center; margin-bottom: 17px; width: 42px; }
+.access-eyebrow { color: #7e8f85; display: block; font-size: 0.66rem; font-weight: 800; letter-spacing: 0.13em; }
+.access-card h1 { color: #20382b; font-size: 1.55rem; letter-spacing: -0.04em; margin: 10px 0; }
+.access-card p { color: #7a8981; font-size: 0.88rem; line-height: 1.55; margin: 0 0 20px; }
+.access-card a { background: #17684e; border-radius: 7px; color: #fff; display: inline-flex; font-size: 0.81rem; font-weight: 700; padding: 10px 13px; text-decoration: none; }
+
+@keyframes app-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; } }

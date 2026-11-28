@@ -1,0 +1,41 @@
+/* F4 Overdue handling. Uses the shared palette tokens from styles/global.css. */
+.f4 { color: var(--color-ink); }
+.f4 code { background: var(--color-accent-soft); border-radius: 5px; padding: 1px 5px; }
+
+.f4-toolbar { align-items: center; display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0 14px; }
+.f4-btn { background: var(--color-navy); border: 0; border-radius: 8px; color: var(--color-blush); font-weight: 650; padding: 9px 16px; }
+.f4-btn:hover:not(:disabled) { background: var(--color-slate); }
+.f4-btn:disabled { opacity: 0.55; }
+.f4-btn.secondary { background: var(--color-blush); color: var(--color-navy); margin-left: 8px; padding: 5px 11px; }
+.f4-btn.secondary:hover { background: var(--color-mauve); color: #fff; }
+.f4-muted { color: var(--color-muted); font-size: 0.86rem; }
+.f4-muted.small { font-size: 0.76rem; margin-top: 3px; }
+
+.f4-msg { border-left: 5px solid; border-radius: 8px; margin: 14px 0; padding: 10px 14px; font-size: 0.9rem; }
+.f4-msg.success { background: var(--color-highlight-soft); border-color: var(--color-blue); color: var(--color-slate); }
+.f4-msg.error { background: var(--color-blush); border-color: var(--color-mauve); }
+.f4-msg.info { background: var(--color-accent-soft); border-color: var(--color-mauve); color: var(--color-slate); margin-top: 20px; }
+
+.f4-stats { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom: 18px; }
+.f4-stat { background: var(--color-surface); border: 1px solid var(--color-line); border-radius: 14px; box-shadow: var(--shadow-soft); display: grid; gap: 6px; padding: 16px 18px; }
+.f4-stat-label { color: var(--color-slate); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.f4-stat strong { color: var(--color-navy); font-size: 1.8rem; letter-spacing: -0.04em; }
+.f4-stat .f4-badge { justify-self: start; }
+
+.f4-card { background: var(--color-surface); border: 1px solid var(--color-blush); border-radius: 14px; box-shadow: var(--shadow-soft); overflow: hidden; }
+.f4-card > h3 { background: var(--color-navy); color: var(--color-blush); font-size: 1rem; font-weight: 650; margin: 0; padding: 11px 16px; }
+.f4-body { margin: 0; padding: 16px; }
+.f4-table-wrap { overflow-x: auto; }
+.f4-table { border-collapse: collapse; font-size: 0.87rem; min-width: 760px; width: 100%; }
+.f4-table th { background: var(--color-slate); color: var(--color-blush); font-weight: 650; padding: 9px 12px; text-align: left; white-space: nowrap; }
+.f4-table td { border-bottom: 1px solid var(--color-blush); padding: 9px 12px; vertical-align: top; }
+.f4-table tr:nth-child(even) td { background: #faf3f7; }
+
+.f4-badge { border-radius: 999px; display: inline-block; font-size: 0.7rem; font-weight: 750; padding: 2px 9px; }
+.f4-badge.overdue { background: var(--color-mauve); color: #fff; }
+.f4-badge.channel { background: var(--color-blue); color: var(--color-deep); text-transform: uppercase; }
+.f4-badge.pending { background: var(--color-blush); color: var(--color-navy); }
+.f4-badge.ok { background: var(--color-highlight-soft); border: 1px solid var(--color-blue); color: var(--color-slate); }
+.f4-badge.late { background: var(--color-navy); color: var(--color-blush); }
+
+.f4-note { color: var(--color-muted); font-size: 0.8rem; line-height: 1.55; margin: 14px 2px 30px; max-width: 760px; }
